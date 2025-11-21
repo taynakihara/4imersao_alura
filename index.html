@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Harry Potter</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-content container">
+        <h1>
+          <img src="/images/Harry_Potter_logo.svg" alt="Harry Potter" />
+        </h1>
+        <div class="search-container">
+          <label for="search-input" class="sr-only"
+            >Pesquise por filmes da saga Harry Potter</label
+          >
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Pesquise por filmes da saga"
+          />
+          <button onclick="iniciarBusca()">Buscar 🪄</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card-container"></section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <ul>
+          <li>
+            <a
+              href="https://github.com/taynakihara"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/taynakihara/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.alura.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Alura</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

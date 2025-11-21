@@ -1,0 +1,227 @@
+/* Estiliza o elemento <body>, que é o contêiner principal de toda a página */
+body {
+  background-image: url("images/harry-potter-11.jpg"); /* Define a imagem de fundo para toda a página. */
+  background-size: cover; /* Faz a imagem cobrir toda a área da tela sem distorcer. */
+  background-position: center; /* Centraliza a imagem de fundo. */
+  background-attachment: fixed; /* Mantém a imagem de fundo fixa enquanto a página rola. */
+  font-family: -apple-system, BlinkMacSystemFont, "Candara", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; /* Define a família de fontes para o texto, com várias opções de fallback. */
+  margin: 0; /* Remove a margem padrão que os navegadores aplicam ao <body>. */
+  display: flex; /* Ativa o layout flexbox para o body, permitindo um controle mais fácil do alinhamento dos filhos. */
+  flex-direction: column; /* Organiza os itens filhos (header, main, footer) em uma coluna vertical. */
+  min-height: 100vh; /* Garante que o corpo ocupe pelo menos 100% da altura da tela (viewport height). */
+}
+
+/* Estiliza qualquer elemento com a classe "container" */
+.container {
+  width: 90%; /* Define a largura como 90% da largura do elemento pai. */
+  max-width: 960px; /* Define uma largura máxima para o container, evitando que ele fique muito largo em telas grandes. */
+  margin: 0 auto; /* Centraliza o container horizontalmente na página (a margem superior/inferior é 0, e a esquerda/direita é automática). */
+}
+
+/* Estiliza o elemento <header> */
+header {
+  background: linear-gradient(
+    to bottom,
+    #e4ab85,
+    #a85920
+  ); /* Define um fundo em degradê para o cabeçalho, indo de um laranja claro para um mais escuro. */
+  padding: 2rem 0; /* Adiciona espaçamento interno (2rem em cima/baixo, 0 na esquerda/direita). */
+  text-align: center; /* Centraliza o texto e outros elementos inline dentro do cabeçalho. */
+  /* border-bottom: 1px solid #ddd; */ /* (Comentado) Adicionaria uma linha cinza na parte inferior do cabeçalho. */
+}
+
+/* Estiliza o contêiner do cabeçalho para posicionar as estrelas */
+.header-content {
+  position: relative; /* Necessário para que as estrelas se posicionem em relação a este contêiner. */
+}
+
+/* Cria as estrelas usando a sombra de um pseudo-elemento no contêiner do cabeçalho */
+.header-content::before {
+  content: ""; /* Pseudo-elementos precisam da propriedade 'content'. */
+  position: absolute; /* Posiciona o gerador de estrelas. */
+  top: 30%; /* Centraliza o ponto de origem das sombras. */
+  left: 50%; /* Centraliza o ponto de origem das sombras. */
+  width: 4px; /* Tamanho da "estrela" base. */
+  height: 4px; /* Tamanho da "estrela" base. */
+  background: transparent; /* O elemento em si é invisível. */
+  border-radius: 50%; /* Garante que as sombras sejam redondas. */
+  animation: twinkle 3s infinite; /* Aplica a animação de piscar a todas as estrelas. */
+  box-shadow: 80px -40px gold, 150px 10px white, 120px 60px gold,
+    20px 70px white, -100px 50px gold, -160px 20px white, -140px -50px gold,
+    -80px -70px white, -20px -20px gold, 0px 40px white;
+}
+
+/* Estiliza o contêiner H1 do logo para posicionar as estrelas */
+.header-content h1 {
+  position: relative; /* Necessário para que as estrelas (pseudo-elementos) se posicionem em relação a este contêiner. */
+  display: inline-block; /* Faz o contêiner ter o tamanho do seu conteúdo (a imagem do logo). */
+}
+
+/* Animação para o efeito de piscar das estrelas */
+@keyframes twinkle {
+  0%,
+  100% {
+    transform: scale(0.5); /* Estrela pequena. */
+    opacity: 0.5; /* Meio transparente. */
+  }
+  50% {
+    transform: scale(1); /* Estrela no tamanho normal. */
+    opacity: 1; /* Totalmente visível. */
+  }
+}
+
+/* Adiciona a imagem da varinha à direita do logo e a espelha */
+.header-content h1::before {
+  content: ""; /* Pseudo-elementos precisam da propriedade 'content'. */
+  position: absolute; /* Posiciona a imagem em relação ao h1. */
+  background-image: url("images/magia_esquerdo.png"); /* Define a imagem de fundo. */
+  background-size: contain; /* Garante que a imagem caiba no espaço definido. */
+  background-repeat: no-repeat; /* Evita que a imagem se repita. */
+  width: 120px; /* Define a largura do elemento. */
+  height: 120px; /* Define a altura do elemento. */
+  top: 50%; /* Alinha verticalmente com o centro do h1. */
+  left: 100%; /* Posiciona a borda esquerda do pseudo-elemento na borda direita do h1. */
+  /* Centraliza verticalmente e espelha a imagem horizontalmente. */
+  transform: translateY(-50%) scaleX(-1);
+  margin-left: 1rem; /* Adiciona um espaço entre o logo e a imagem. */
+}
+
+/* Adiciona a imagem da varinha à esquerda do logo usando um pseudo-elemento */
+.header-content h1::after {
+  content: ""; /* Pseudo-elementos precisam da propriedade 'content'. */
+  position: absolute; /* Posiciona a imagem em relação ao h1. */
+  background-image: url("images/magia_esquerdo.png"); /* Define a imagem de fundo. */
+  background-size: contain; /* Garante que a imagem caiba no espaço definido sem distorcer. */
+  background-repeat: no-repeat; /* Evita que a imagem se repita. */
+  width: 120px; /* Define a largura do elemento. */
+  height: 120px; /* Define a altura do elemento. */
+  top: 50%; /* Alinha verticalmente com o centro do h1. */
+  right: 100%; /* Posiciona a borda direita do pseudo-elemento na borda esquerda do h1. */
+  transform: translateY(-50%); /* Centraliza verticalmente de forma precisa. */
+  margin-right: 1rem; /* Adiciona um espaço entre a imagem e o logo. */
+}
+
+/* Estiliza a imagem <img> dentro de um <h1> que está dentro de um elemento com a classe "header-content" */
+.header-content h1 img {
+  height: 100px; /* Ajusta a altura da imagem do logo para 100 pixels. */
+  width: auto; /* Garante que a largura da imagem seja ajustada proporcionalmente à altura para não distorcer. */
+}
+
+/* Estiliza o contêiner da barra de pesquisa */
+.search-container {
+  margin-top: 1rem; /* Adiciona uma margem no topo do container de busca, separando-o do logo. */
+}
+
+/* Estiliza o campo de input <input> dentro do contêiner de busca */
+.search-container input {
+  padding: 0.5rem; /* Adiciona espaçamento interno ao campo de input para o texto não ficar colado nas bordas. */
+  border: 1px solid #ccc; /* Define uma borda cinza clara de 1 pixel de espessura. */
+  border-radius: 4px; /* Arredonda as bordas do input em 4 pixels. */
+  width: 250px; /* Define uma largura fixa de 250 pixels para o campo de input. */
+}
+
+/* Estiliza o botão <button> dentro do contêiner de busca */
+.search-container button {
+  padding: 0.5rem 1rem; /* Adiciona espaçamento interno (0.5rem em cima/baixo, 1rem na esquerda/direita). */
+  border: none; /* Remove a borda padrão do botão. */
+  background-color: #0056b3; /* Define a cor de fundo do botão para um tom de azul. */
+  color: white; /* Define a cor do texto do botão como branco. */
+  border-radius: 4px; /* Arredonda as bordas do botão em 4 pixels. */
+  cursor: pointer; /* Muda o cursor para uma "mãozinha" (ponteiro) ao passar por cima do botão. */
+}
+
+/* Estiliza o elemento <main>, que contém o conteúdo principal da página */
+main {
+  flex: 1; /* Faz com que a seção principal ocupe todo o espaço vertical disponível entre o header e o footer. */
+  padding: 2rem 0; /* Adiciona espaçamento interno (2rem em cima/baixo, 0 na esquerda/direita). */
+}
+
+/* Estiliza o elemento <footer> */
+footer {
+  background: #030303; /* Define um fundo preto para o rodapé. */
+  color: white; /* Define a cor do texto do rodapé como branco. */
+  padding: 2rem 0; /* Adiciona espaçamento interno (2rem em cima/baixo, 0 na esquerda/direita). */
+  text-align: center; /* Centraliza o conteúdo do rodapé. */
+}
+
+/* Estiliza a lista não ordenada <ul> dentro do rodapé */
+footer ul {
+  list-style: none; /* Remove os marcadores (bolinhas) padrão da lista. */
+  padding: 0; /* Remove o espaçamento interno padrão da lista. */
+  margin: 0; /* Remove a margem padrão da lista. */
+  display: flex; /* Organiza os itens da lista (<li>) em linha (lado a lado). */
+  justify-content: center; /* Centraliza os itens da lista horizontalmente no contêiner flex. */
+  gap: 1rem; /* Adiciona um espaço de 1rem entre cada item da lista. */
+}
+
+/* Estiliza os links <a> dentro do rodapé */
+footer a {
+  color: rgb(
+    131,
+    198,
+    230
+  ); /* Define a cor dos links no rodapé para um tom de azul claro. */
+  text-decoration: none; /* Remove o sublinhado padrão dos links. */
+}
+
+/* Estiliza o contêiner que agrupa todos os cards de filmes */
+.card-container {
+  display: grid; /* Ativa o layout de grid, para organizar os cards em linhas e colunas. */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* Cria colunas responsivas: o navegador cria quantas colunas puder com no mínimo 250px de largura, e distribui o espaço restante igualmente. */
+  gap: 1.5rem; /* Adiciona um espaço de 1.5rem entre as linhas e colunas do grid. */
+}
+
+/* Estiliza cada card de filme individualmente */
+.card {
+  background-color: #fdf6f6; /* Define uma cor de fundo branco-rosado para o card. */
+  border: 1px solid #ddd; /* Adiciona uma borda cinza clara de 1 pixel. */
+  border-radius: 8px; /* Arredonda as bordas do card em 8 pixels. */
+  padding: 1rem; /* Adiciona espaçamento interno de 1rem em todos os lados do card. */
+  display: flex; /* Ativa o layout flexbox para o card. */
+  flex-direction: column; /* Organiza os itens dentro do card em uma coluna vertical. */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil ao card para dar profundidade. */
+}
+
+/* Estiliza o título <h2> dentro de um card */
+.card h2 {
+  margin-top: 0; /* Remove a margem superior padrão do h2 para alinhá-lo ao topo do card. */
+  font-size: 1.2rem; /* Define o tamanho da fonte do título. */
+}
+
+/* Estiliza a imagem <img> dentro de um card */
+.card img {
+  width: 100%; /* Faz a imagem ocupar 100% da largura do card. */
+  height: 375px; /* Define uma altura fixa para todas as imagens, garantindo uniformidade. */
+  object-fit: cover; /* Garante que a imagem cubra todo o espaço (375px de altura) sem distorcer, cortando o excesso se necessário. */
+  border-radius: 4px; /* Arredonda as bordas da imagem em 4 pixels. */
+  margin-bottom: 1rem; /* Adiciona uma margem na parte inferior da imagem, separando-a do texto abaixo. */
+}
+
+/* Estiliza o link <a> dentro de um card */
+.card a {
+  margin-top: auto; /* Empurra o link para a parte inferior do card, útil em um contêiner flexível. */
+  text-decoration: none; /* Remove o sublinhado padrão do link. */
+  color: #0056b3; /* Define a cor do texto do link para um tom de azul. */
+}
+
+/* Classe para esconder elementos visualmente, mas mantê-los acessíveis para leitores de tela */
+.sr-only {
+  /* "Screen-reader only": esconde o elemento da visão, mas leitores de tela ainda podem acessá-lo. */
+  position: absolute; /* Tira o elemento do fluxo normal da página, para não ocupar espaço. */
+  width: 1px; /* Define uma largura mínima para que o elemento não desapareça completamente. */
+  height: 1px; /* Define uma altura mínima para que o elemento não desapareça completamente. */
+  padding: 0; /* Remove qualquer espaçamento interno. */
+  margin: -1px; /* Move o elemento para fora da tela visível. */
+  overflow: hidden; /* Esconde qualquer conteúdo que transborde do elemento de 1x1 pixel. */
+  clip: rect(
+    0,
+    0,
+    0,
+    0
+  ); /* Define uma área de recorte vazia (método antigo, para compatibilidade). */
+  border: 0; /* Remove qualquer borda. */
+}
