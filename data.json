@@ -3,48 +3,56 @@
     "titulo": "Harry Potter e a Pedra Filosofal (2001)",
     "descricao": "Um jovem órfão descobre que é um bruxo e é convidado a estudar na Escola de Magia e Bruxaria de Hogwarts.",
     "imagem": "images/Harry_Potter_Pedra_Filosofal_2001.jpg",
-    "link": "https://www.imdb.com/title/tt0241527/"
+    "link": "https://www.imdb.com/title/tt0241527/",
+    "trailer": ""
   },
   {
     "titulo": "Harry Potter e a Câmara Secreta (2002)",
     "descricao": "Harry retorna para seu segundo ano em Hogwarts, mas uma série de ataques misteriosos aterroriza os alunos.",
     "imagem": "images/Harry_Potter_Camara_Secreta_2002.jpg",
-    "link": "https://www.imdb.com/title/tt0295297/"
+    "link": "https://www.imdb.com/title/tt0295297/",
+    "trailer": ""
   },
   {
     "titulo": "Harry Potter e o Prisioneiro de Azkaban (2004)",
     "descricao": "No terceiro ano, Harry descobre que um perigoso prisioneiro, Sirius Black, escapou de Azkaban e está atrás dele.",
     "imagem": "images/Harry_Potter_Prisioneiro_Azkaban_2004.jpg",
-    "link": "https://www.imdb.com/title/tt0304141/"
+    "link": "https://www.imdb.com/title/tt0304141/",
+    "trailer": ""
   },
   {
     "titulo": "Harry Potter e o Cálice de Fogo (2005)",
     "descricao": "Harry é misteriosamente selecionado para competir no perigoso Torneio Tribruxo, enfrentando desafios mortais.",
     "imagem": "images/Harry_Potter_Calice_Fogo_2005.jpg",
-    "link": "https://www.imdb.com/title/tt0330373/"
+    "link": "https://www.imdb.com/title/tt0330373/",
+    "trailer": ""
   },
   {
     "titulo": "Harry Potter e a Ordem da Fênix (2007)",
     "descricao": "Com o retorno de Voldemort negado pelo Ministério da Magia, Harry e seus amigos formam a 'Armada de Dumbledore'.",
     "imagem": "images/Harry_Potter_Ordem_Fenix_2007.jpg",
-    "link": "https://www.imdb.com/title/tt0373889/"
+    "link": "https://www.imdb.com/title/tt0373889/",
+    "trailer": ""
   },
   {
     "titulo": "Harry Potter e o Enigma do Príncipe (2009)",
     "descricao": "Enquanto Voldemort aperta seu cerco, Harry e Dumbledore trabalham para encontrar a chave da imortalidade do Lorde das Trevas.",
     "imagem": "images/Harry_Potter_Enigma_Principe_2009.jpg",
-    "link": "https://www.imdb.com/title/tt0417741/"
+    "link": "https://www.imdb.com/title/tt0417741/",
+    "trailer": ""
   },
   {
     "titulo": "Harry Potter e as Relíquias da Morte – Parte 1 (2010)",
     "descricao": "Harry, Rony e Hermione partem em uma perigosa missão para encontrar e destruir as Horcruxes de Voldemort.",
     "imagem": "images/Harry_Potter_Reliquias_Morte_P1_2010.jpg",
-    "link": "https://www.imdb.com/title/tt0926084/"
+    "link": "https://www.imdb.com/title/tt0926084/",
+    "trailer": ""
   },
   {
     "titulo": "Harry Potter e as Relíquias da Morte – Parte 2 (2011)",
     "descricao": "A batalha final entre as forças do bem e do mal do mundo bruxo se transforma em uma guerra total.",
     "imagem": "images/Harry_Potter_Reliquias_Morte_P2_2011.jpg",
-    "link": "https://www.imdb.com/title/tt1201607/"
+    "link": "https://www.imdb.com/title/tt1201607/",
+    "trailer": ""
   }
 ]
